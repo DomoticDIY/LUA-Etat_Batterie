@@ -18,8 +18,18 @@ Les variables :
 - EnvoiMail = false   // Ne pas modifier, Initialisation de la variable
 
 Si vous souhaitez scanner que les Capteurs qui sont actif, vous pouvez décommenter dans le script les deux lignes en fin de IF :
-- -- and device.Used == 1 then
-Supprimer les deux tirets : and device.Used == 1 then
+- if device.BatteryLevel < 100 then -- and device.Used == 1 then
+
+Ce qui donne pour la ligne compléte :
+if device.BatteryLevel < 100 and device.Used == 1 then
+
+Faire de même pour :
+
+if device.BatteryLevel < BatteryThreshold then -- and device.Used == 1 then
+
+qui devient :
+
+if device.BatteryLevel < BatteryThreshold and device.Used == 1 then
 
 # Tuto vidéo
 Vidéo explicative sur YouTube : 
