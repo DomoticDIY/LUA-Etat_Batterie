@@ -9,7 +9,7 @@ SummaryDay = 1 -- Sunday is 1
 EmailTo = "adresse_mail@domaine.ext"
 ReportHour = 08
 ReportMinute = 30
-Domoticz = "localhost"
+Domoticz = "http://localhost"
 DomoticzPort = "8080"
 Sujet = ''
 Message = ''
@@ -24,7 +24,7 @@ time = os.date("*t")
 if WeeklySummary == true and time.wday == SummaryDay and time.hour == ReportHour and time.min == ReportMinute then
 
     -- Get a list of all devices
-    handle = io.popen("curl 'http://" .. Domoticz .. ":" .. DomoticzPort .. "/json.htm?type=devices&order=name'")
+    handle = io.popen("curl '" .. Domoticz .. ":" .. DomoticzPort .. "/json.htm?type=devices&order=name'")
     devicesJson = handle:read('*all')
     handle:close()
     devices = json:decode(devicesJson)
@@ -42,7 +42,7 @@ if WeeklySummary == true and time.wday == SummaryDay and time.hour == ReportHour
 elseif time.hour == ReportHour and time.min == ReportMinute then
 
     -- Get a list of all devices
-    handle = io.popen("curl 'http://" .. Domoticz .. ":" .. DomoticzPort .. "/json.htm?type=devices&order=name'")
+    handle = io.popen("curl '" .. Domoticz .. ":" .. DomoticzPort .. "/json.htm?type=devices&order=name'")
     devicesJson = handle:read('*all')
     handle:close()
     devices = json:decode(devicesJson)
