@@ -6,7 +6,7 @@
 BatteryThreshold = 20
 WeeklySummary = true -- Envoi le W-E (oui ou non)
 SummaryDay = 1 -- Sunday is 1
-EmailTo = "tel.domi@gmail.com"
+EmailTo = "adresse_mail@domaine.ext"
 ReportHour = 08
 ReportMinute = 30
 Domoticz = "localhost"
