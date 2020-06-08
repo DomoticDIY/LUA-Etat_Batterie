@@ -30,4 +30,4 @@ qui devient :
 - if device.BatteryLevel < BatteryThreshold and device.Used == 1 then
 
 # Tuto vidéo
-Vidéo explicative sur YouTube : 
+Vidéo explicative sur YouTube : https://youtu.be/mw93epiIe6E
